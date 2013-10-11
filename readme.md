@@ -1,12 +1,14 @@
 ﻿Hot Towel Mobile
 =================
 
+Demo: http://hottowelmobile.azurewebsites.net/
+
 ![Screenshot](Spa2/Content/images/readme.png)
 
-Demo: http://hottowelmobile.azurewebsites.net/
 
 Features
 ---------
+* Responsive design
 * Adds Phonegap to Hot Towel for native deployments to Android / iPhone / Blackberry / Windows Phone / etc... so 
 you can use native features such as the Camera and deploy your application to the app stores.
 * Removes the cshtml dependency and adds a plain index.html page
