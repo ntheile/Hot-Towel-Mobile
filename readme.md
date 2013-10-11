@@ -1,7 +1,9 @@
 ﻿Hot Towel Mobile
 =================
 
-![Screenshot](Content/images/readme.png)
+![Screenshot](Spa2/Content/images/readme.png)
+
+Demo: http://hottowelmobile.azurewebsites.net/
 
 Features
 ---------
