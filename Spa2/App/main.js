@@ -44,7 +44,14 @@ function boot (app, viewLocator, system, router, logger) {
             viewLocator.useConvention();
 
             //Show the app by setting the root view model for our application.
-            app.setRoot('viewmodels/shell', 'entrance');
+            if (app.lastPage) {
+
+            }
+            else {
+                app.setRoot('viewmodels/shell', 'entrance');
+            }
+
+           
         });
     }
 
