@@ -37,9 +37,10 @@ To Create a PhoneGap Build App
 1. Review the docs here, https://build.phonegap.com/docs 
 2. To get up and running quickly...simply build the app in `test` mode so weyland will build and minify the js together
 3. Then reference `main-built.js` in your index.html. 
-4. Next run the `PhoneGapBuild.ps1` and it will output a folder on the desktop.
-5. Zip the folder up and upload it to https://build.phonegap.com . 
-An app will be built and available for download from the site.
+4. If you use github then simply push the code up and reference your repo on the phonegap build site. If not, you can run the 
+`PhoneGapBuild.ps1` and it will output a folder on the desktop. You can manually Zip this folder and 
+upload to https://build.phonegap.com . 
+5. An app will be built and available for download from the Phonegap Build site.
 
 To Create App Icons
 -------------------
@@ -47,7 +48,7 @@ You can generate Android icons using this site http://android-ui-utils.googlecod
 Then configure the `config.xml` to use them in the build
 
 
-mmenu plugin - custom binding handler
+Custom binding handler - mmenu plugin 
 -------------------------------------
 To get the jquery.mmenu plugin to work, a durandal custom binding handler was created in  
 `services/binding-handlers.js`. This file is loaded at app start in main.js.
