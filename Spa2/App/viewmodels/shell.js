@@ -1,19 +1,12 @@
-﻿define(['durandal/system', 'plugins/router', 'services/logger'],
-    function (system, router, logger) {
-        var shell = {
-            activate: activate,
-            router: router
-        };
-
-        return shell;
-
+﻿define(['durandal/system', 'plugins/router', 'services/logger', 'durandal/app'],
+    function (system, router, logger, app) {
+ 
         //#region Internal Methods
         function activate() {
 
             return boot();
         }
 
- 
         function boot() {
             log('Hot Towel SPA Loaded!', null, true);
 
@@ -43,4 +36,11 @@
             logger.logError(msg, data, system.getModuleId(shell), showToast);
         }
         //#endregion
+
+        var shell = {
+            activate: activate,
+            router: router
+        };
+
+        return shell;
     });

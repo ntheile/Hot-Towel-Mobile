@@ -34,7 +34,7 @@ function boot (app, viewLocator, system, router, logger) {
         app.start().then(function () {
             toastr.options.positionClass = 'toast-bottom-right';
             toastr.options.backgroundpositionClass = 'toast-bottom-right';
-            toastr.info('Platform: ' + app.platform + ', isInitialized: ' + window.isInitialized);
+            toastr.info('Platform: ' + app.platform + ', isInitialized: ' + app.isInitialized);
 
             // When finding a viewmodel module, replace the viewmodel string 
             // with view to find it partner view.
@@ -46,11 +46,11 @@ function boot (app, viewLocator, system, router, logger) {
             //Show the app by setting the root view model for our application, if
             // it has not already been initialized. This is benifitial for mobile tombstoneing so 
             // when you re-open an app the last state/page is persisted.
-            if (window.isInitialized) {
+            if (app.isInitialized) {
                 // do nothing, the last page you visited will be shown
             }
             else {
-                window.isInitialized = true;
+                app.isInitialized = true;
                 app.setRoot('viewmodels/shell', 'entrance');
             }
 

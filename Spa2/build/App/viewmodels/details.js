@@ -1,1 +1,1 @@
-define(["services/logger","durandal/composition","durandal/app"],function(e,t){function n(){return e.log(i+" View Activated",null,i,!0),!0}var i="Details",r={activate:n,title:i,composition:t};return r});
+define(["services/logger","durandal/composition","durandal/app"],function(e,t,n){function i(){return e.log(o+" View Activated",null,o,!0),!0}function r(){n.isInitialized=!0,toastr.info("Deactived called")}var o="Details",a={activate:i,title:o,deactivate:r,composition:t};return a});
