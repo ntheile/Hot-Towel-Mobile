@@ -9,8 +9,8 @@
     }
 
     function deactivate() {
-        app.isInitialized = true;
-        toastr.info("Deactived called");
+        app.lastPage = title;
+        toastr.info("lastPage:" + app.lastPage);
     }
 
     //#endregion
