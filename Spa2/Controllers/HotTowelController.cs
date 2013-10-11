@@ -1,6 +1,6 @@
 using System.Web.Mvc;
 
-namespace Spa2.Controllers
+namespace HotTowelMobile.Controllers
 {
     public class HotTowelController : Controller
     {

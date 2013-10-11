@@ -1,7 +1,7 @@
 using System.Web;
 using System.Web.Mvc;
 
-namespace Spa2
+namespace HotTowelMobile
 {
     public class FilterConfig
     {

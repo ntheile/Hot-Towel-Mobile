@@ -1,7 +1,7 @@
 using System;
 using System.Web.Optimization;
 
-namespace Spa2
+namespace HotTowelMobile
 {
     public class BundleConfig
     {
