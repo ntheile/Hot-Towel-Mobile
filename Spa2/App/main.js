@@ -43,15 +43,17 @@ function boot (app, viewLocator, system, router, logger) {
             // Otherwise you can pass paths for modules, views, partials
             viewLocator.useConvention();
 
-            //Show the app by setting the root view model for our application.
-            if (app.lastPage) {
-
+            //Show the app by setting the root view model for our application, if
+            // it has not already been initialized. This is benifitial for mobile tombstoneing so 
+            // when you re-open an app the last state/page is persisted.
+            if (app.isInitialized) {
+                // do nothing, the last page you visited will be shown
             }
             else {
+                app.isInitialized = true;
                 app.setRoot('viewmodels/shell', 'entrance');
             }
 
-           
         });
     }
 

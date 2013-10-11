@@ -1,1 +1,1 @@
-define(["services/logger"],function(e){function t(){return e.log(n+" View Activated",null,n,!0),!0}var n="Home",i={activate:t,title:n};return i});
+define(["services/logger","durandal/app"],function(e){function t(){return e.log(n+" View Activated",null,n,!0),!0}var n="Home",i={activate:t,title:n};return i});
