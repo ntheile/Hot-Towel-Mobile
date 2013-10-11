@@ -1,0 +1,98 @@
+﻿// Maps the files so Durandal knows where to find these.
+require.config({
+    paths: {
+        'text': '../Scripts/text',
+        'durandal': '../Scripts/durandal',
+        'plugins': '../Scripts/durandal/plugins',
+        'transitions': '../Scripts/durandal/transitions',
+        'composition': '../Scripts/durandal/composition'
+    },
+    // Sets the configuration for your third party scripts that are not AMD compatible
+    shim: {
+        "../Scripts/jquery.mmenu.min": {
+            "deps": ["../Scripts/jquery-1.9.1", 'durandal/app'],
+            "exports": ""
+        }
+    } // end Shim Configuration
+});
+
+
+//define([
+//    '../Scripts/jquery-1.9.1',
+//    '../Scripts/knockout-2.3.0.debug',
+//    '../Scripts/toastr',
+//    '../Scripts/q',
+//    '../Scripts/breeze.debug',
+//    '../Scripts/bootstrap',
+//    '../Scripts/moment',
+//    '../Scripts/chosen.jquery.min',
+//    '../Scripts/jquery.mmenu.min'
+//], function (
+//    jQuery,
+//    ko,
+//    toastr,
+//    Q,
+//    breeze,
+//    bootstrap,
+//    moment,
+//    chosen,
+//    mmenu
+//){
+
+
+//});
+
+define('../Scripts/jquery-1.9.1', jQuery);
+define('../Scripts/knockout-2.3.0.debug',ko);
+define('../Scripts/toastr', toastr);
+define('../Scripts/Q', Q);
+define('../Scripts/breeze.debug', breeze);
+define('../Scripts/bootstrap', bootstrap);
+define('../Scripts/moment', moment);
+define('../Scripts/chosen.jquery.min', chosen);
+define('../Scripts/jquery.mmenu.min', mmenu);
+
+
+
+// Durandal 2.x assumes no global libraries. It will ship expecting 
+// Knockout and jQuery to be defined with requirejs. .NET 
+// templates by default will set them up as standard script
+// libs and then register them with require as follows: 
+//define('jquery', function () { return jQuery; });
+//define('knockout', ko);
+
+define(['durandal/app', 'durandal/viewLocator', 'durandal/system', 'plugins/router', 'services/logger'], boot);
+
+function boot(app, viewLocator, system, router, logger) {
+
+    // Enable debug message to show in the console 
+    system.debug(true);
+
+    app.title = 'My App';
+
+    app.configurePlugins({
+        router: true
+    });
+
+    // require our custom binding-handlers we wrote for widgets and plugins we pull off the web
+    require(['services/binding-handlers']);
+
+    app.start().then(function () {
+        toastr.options.positionClass = 'toast-bottom-right';
+        toastr.options.backgroundpositionClass = 'toast-bottom-right';
+
+        // When finding a viewmodel module, replace the viewmodel string 
+        // with view to find it partner view.
+        // [viewmodel]s/sessions --> [view]s/sessions.html
+        // Defaults to viewmodels/views/views. 
+        // Otherwise you can pass paths for modules, views, partials
+        viewLocator.useConvention();
+
+        //Show the app by setting the root view model for our application.
+        app.setRoot('viewmodels/shell', 'entrance');
+    });
+}
+
+
+
+

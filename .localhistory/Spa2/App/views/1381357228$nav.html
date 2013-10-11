@@ -1,0 +1,17 @@
+﻿<nav class="mmenu-wrapper" data-bind="mmenu: {}">
+	<ul>
+		<li>
+            <a id="open-icon" href="#">
+				<i class="icon icon-white icon-list"></i>
+            </a>
+		</li>
+        <!-- ko foreach: router.routes -->
+        <li>
+            <a href="#details">
+				<i data-bind="attr: { 'class': icon }"></i>
+				<span data-bind="text: title"></span>
+            </a>
+		</li>
+        <!-- /ko -->
+	</ul>
+</nav>

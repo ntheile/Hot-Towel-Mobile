@@ -1,0 +1,177 @@
+﻿<html class="">
+<script id="tinyhippos-injected">if (window.top.ripple) { window.top.ripple("bootstrap").inject(window, document); }</script>
+<head>
+    <title>Details | My App</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <link href="/Content/ie10mobile.css" rel="stylesheet">
+    <link href="/Content/bootstrap.css" rel="stylesheet">
+    <link href="/Content/bootstrap-responsive.css" rel="stylesheet">
+    <link href="/Content/durandal.css" rel="stylesheet">
+    <link href="/Content/toastr.css" rel="stylesheet">
+    <link href="/Content/chosen/chosen.min.css" rel="stylesheet">
+    <link href="/Content/mmenu/docs.css" rel="stylesheet">
+    <link href="/Content/mmenu/mmenu.css" rel="stylesheet">
+
+
+    <style type="text/css">
+        html, body {
+            width: 100%;
+            height: 100%;
+            padding: 0;
+            margin: 0;
+            overflow-x: hidden;
+        }
+
+        .mm-page {
+            background: inherit;
+            min-height: 100%;
+            position: relative;
+            margin-left: 50px;
+        }
+
+        html.mm-opened .mm-page {
+            margin-left: 50px;
+        }
+
+        html.mm-opening .mm-page {
+            margin-left: -65px;
+        }
+
+        .mm-menu {
+            display: block !important;
+        }
+
+        #menu .icon {
+            margin: 0 15px 0 -2px;
+        }
+
+        #open-icon {
+            margin-top: -20px;
+        }
+    </style>
+
+    <script type="text/javascript">
+        if (navigator.userAgent.match(/IEMobile\/10\.0/)) {
+            var msViewportStyle = document.createElement("style");
+            var mq = "@-ms-viewport{width:auto!important}";
+            msViewportStyle.appendChild(document.createTextNode(mq));
+            document.getElementsByTagName("head")[0].appendChild(msViewportStyle);
+        }
+    </script>
+    <script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="main" src="/App/main.js"></script>
+    <script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="durandal/app" src="/App/../Scripts/durandal/app.js"></script>
+    <script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="durandal/viewLocator" src="/App/../Scripts/durandal/viewLocator.js"></script>
+    <script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="durandal/system" src="/App/../Scripts/durandal/system.js"></script>
+    <script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="plugins/router" src="/App/../Scripts/durandal/plugins/router.js"></script>
+    <script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="services/logger" src="/App/services/logger.js"></script>
+    <script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="durandal/viewEngine" src="/App/../Scripts/durandal/viewEngine.js"></script>
+    <script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="durandal/composition" src="/App/../Scripts/durandal/composition.js"></script>
+    <script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="durandal/events" src="/App/../Scripts/durandal/events.js"></script>
+    <script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="durandal/activator" src="/App/../Scripts/durandal/activator.js"></script>
+    <script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="plugins/history" src="/App/../Scripts/durandal/plugins/history.js"></script>
+    <script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="durandal/binder" src="/App/../Scripts/durandal/binder.js"></script>
+    <script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="bindingHandlers" src="/App/services/binding-handlers.js"></script>
+    <script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="viewmodels/shell" src="/App/viewmodels/shell.js"></script>
+    <script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="text" src="/App/../Scripts/text.js"></script>
+    <script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="viewmodels/home" src="/App/viewmodels/home.js"></script>
+    <script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="transitions/entrance" src="/App/../Scripts/durandal/transitions/entrance.js"></script>
+    <script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="viewmodels/details" src="/App/viewmodels/details.js"></script>
+</head>
+<body>
+    <nav id="menu" class="mm-menu mm-is-menu mm-horizontal">
+        <div class="mm-inner">
+            <ul class="mm-opened">
+                <li>
+                    <a id="open-icon" href="#">
+                        <i class="icon icon-white icon-list"></i>
+                    </a>
+                </li>
+                <li class="">
+                    <a href="#home">
+                        <i class="icon icon-white icon-home"></i>
+                        Home
+                    </a>
+                </li>
+                <li class="mm-selected">
+                    <a href="#details">
+                        <i class="icon icon-white icon-arrow-right"></i>
+                        Details
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="mm-page" style="">
+        <div id="applicationHost">
+            <div id="page" data-view="views/shell" style="" data-active-view="true">
+                <div id="header">
+                    Hot Towel Mobile
+                </div>
+                <div id="content" data-bind="router: { transition: 'entrance', cacheViews: true }">
+                    <section data-view="views/details" style="" data-active-view="true">
+                        <h2 class="page-title" data-bind="text: title">Details</h2>
+
+                        <!--<select data-bind="chosen: {}, options: stuff, selectedOptions: stuffSelected, optionsAfterRender: function () { $('.chosen').trigger('chosen:updated'); } " style="width:350px; " multiple class="chosen" >
+       
+    </select>-->
+
+                        <select data-bind="chosen: {}, options: stuff, selectedOptions: stuffSelected, chosenAfterRender: {}" style="width: 350px; display: none;" multiple="" class="chosen">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+
+                        </select><div class="chosen-container chosen-container-multi" style="width: 350px;" title="">
+                            <ul class="chosen-choices">
+                                <li class="search-choice"><span>3</span><a class="search-choice-close" data-option-array-index="2"></a></li>
+                                <li class="search-field">
+                                    <input type="text" value="Select Some Options" class="" autocomplete="off" style="width: 25px;"></li>
+                            </ul>
+                            <div class="chosen-drop">
+                                <ul class="chosen-results"></ul>
+                            </div>
+                        </div>
+
+                        <span data-bind="text: stuffSelected">3</span>
+
+                        <br>
+                        <br>
+                        <button class="btn btn-success" data-bind="click: addToStuff">Add to Stuff</button>
+
+
+                    </section>
+                    <section data-view="views/home" style="display: none;">
+                        <h2 class="page-title" data-bind="text: title">Home</h2>
+                    </section>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="/scripts/jquery-1.9.1.js"></script>
+    <script src="/scripts/knockout-2.3.0.debug.js"></script>
+    <script src="/scripts/toastr.js"></script>
+    <script src="/scripts/Q.js"></script>
+    <script src="/scripts/breeze.debug.js"></script>
+    <script src="/scripts/bootstrap.js"></script>
+    <script src="/scripts/moment.js"></script>
+    <script src="/scripts/chosen.jquery.min.js"></script>
+    <script src="/scripts/jquery.mmenu.min.js"></script>
+
+    <script src="/Scripts/require.js" data-main="/App/main"></script>
+
+
+
+
+    <div id="mm-blocker"></div>
+</body>
+</html>

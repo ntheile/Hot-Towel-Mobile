@@ -1,0 +1,36 @@
+﻿<div data-bind="compose: { view: 'nav' }">
+</div>
+<div id="page">
+    
+	<div id="header">
+        
+        <div class="navbar navbar-static-top navbar-inverse navbar-fixed-top">
+          <div class="navbar-inner">
+            <div class="container">
+ 
+              <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+             <!-- <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </a>-->
+              <a data-toggle="collapse" data-target=".nav-collapse" id="open-icon-header" href="#menu"></a>
+ 
+              <!-- Be sure to leave the brand out there if you want it shown -->
+              <a class="brand" href="#">Hot Towel Mobile</a>
+ 
+              <!-- Everything you want hidden at 940px or less, place within here -->
+              <div class="nav-collapse collapse">
+                <!-- .nav, .navbar-search, .navbar-form, etc -->
+              </div>
+ 
+            </div>
+          </div>
+        </div>
+	</div>
+	<div id="content" data-bind="router: { transition: 'entrance', cacheViews: true }">
+
+	</div>
+	
+</div>
+

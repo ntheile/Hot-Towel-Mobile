@@ -1,0 +1,89 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Details | My App</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <link href="/Content/ie10mobile.css" rel="stylesheet">
+    <link href="/Content/bootstrap.css" rel="stylesheet">
+    <link href="/Content/bootstrap-responsive.css" rel="stylesheet">
+    <link href="/Content/durandal.css" rel="stylesheet">
+    <link href="/Content/toastr.css" rel="stylesheet">
+    <link href="/Content/chosen/chosen.min.css" rel="stylesheet">
+    <link href="/Content/mmenu/docs.css" rel="stylesheet">
+    <link href="/Content/mmenu/mmenu.css" rel="stylesheet">
+
+
+    <style type="text/css">
+        html, body {
+            width: 100%;
+            height: 100%;
+            padding: 0;
+            margin: 0;
+            overflow-x: hidden;
+        }
+
+        .mm-page {
+            background: inherit;
+            min-height: 100%;
+            position: relative;
+            margin-left: 50px;
+        }
+
+        html.mm-opened .mm-page {
+            margin-left: 50px;
+        }
+
+        html.mm-opening .mm-page {
+            margin-left: -65px;
+        }
+
+        .mm-menu {
+            display: block !important;
+        }
+
+        #menu .icon {
+            margin: 0 15px 0 -2px;
+        }
+
+        #open-icon {
+            margin-top: -20px;
+        }
+    </style>
+
+    <script type="text/javascript">
+        if (navigator.userAgent.match(/IEMobile\/10\.0/)) {
+            var msViewportStyle = document.createElement("style");
+            var mq = "@-ms-viewport{width:auto!important}";
+            msViewportStyle.appendChild(document.createTextNode(mq));
+            document.getElementsByTagName("head")[0].appendChild(msViewportStyle);
+        }
+    </script>
+    
+</head>
+<body>
+   
+    <div id="applicationHost">
+        splashing... 
+    </div>
+
+    <script src="/scripts/jquery-1.9.1.js"></script>
+    <script src="/scripts/knockout-2.3.0.debug.js"></script>
+    <script src="/scripts/toastr.js"></script>
+    <script src="/scripts/Q.js"></script>
+    <script src="/scripts/breeze.debug.js"></script>
+    <script src="/scripts/bootstrap.js"></script>
+    <script src="/scripts/moment.js"></script>
+    <script src="/scripts/chosen.jquery.min.js"></script>
+    <script src="/scripts/jquery.mmenu.min.js"></script>
+
+    <script src="/Scripts/require.js" data-main="/App/main"></script>
+    
+</body>
+</html>

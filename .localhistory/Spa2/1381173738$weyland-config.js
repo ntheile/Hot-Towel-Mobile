@@ -1,0 +1,51 @@
+exports.config = function (weyland) {
+    weyland.build('main')
+        .task.jshint({
+            include: 'App/**/*.js'
+        })
+        .task.uglifyjs({
+            include: ['App/**/*.js', 'Scripts/durandal/**/*.js']
+        })
+        .task.rjs({
+            include: [
+                'Scripts/jquery-1.9.1.js',
+                'Scripts/knockout-2.3.0.debug.js',
+                'Scripts/toastr.js',
+                'Scripts/Q.js',
+                'Scripts/breeze.debug.js',
+                'Scripts/bootstrap.js',
+                'Scripts/moment.js',
+                'Scripts/chosen.jquery.min.js',
+                'Scripts/jquery.mmenu.min.js',
+                'App/**/*.{js,html}',
+                'Scripts/durandal/**/*.js'
+            ],
+            loaderPluginExtensionMaps: {
+                '.html': 'text'
+            },
+            rjs: {
+                name: '../Scripts/almond-custom', //to deploy with require.js, use the build's name here instead
+                insertRequire: ['main'], //not needed for require
+                baseUrl: 'App',
+                //mainConfigFile: 'App/main.js', //not needed for require
+                wrap: true, //not needed for require
+                paths: {
+                    'text': '../Scripts/text',
+                    'durandal': '../Scripts/durandal',
+                    'plugins': '../Scripts/durandal/plugins',
+                    'transitions': '../Scripts/durandal/transitions',
+                    'knockout': 'empty:',
+                    'bootstrap': 'empty:',
+                    'jquery': 'empty:'
+                },
+                inlineText: true,
+                optimize: 'none',
+                pragmas: {
+                    build: true
+                },
+                stubModules: ['text'],
+                keepBuildDir: true,
+                out: 'App/main-built.js'
+            }
+        });
+};

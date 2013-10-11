@@ -1,0 +1,1 @@
+define(["durandal/system"],function(e){function t(e,t,n,r){i(e,t,n,r,"info")}function n(e,t,n,r){i(e,t,n,r,"error")}function i(t,n,i,r,o){i=i?"["+i+"] ":"",n?e.log(i,t,n):e.log(i,t),r&&("error"===o?toastr.error(t):toastr.info(t))}var r={log:t,logError:n};return r});

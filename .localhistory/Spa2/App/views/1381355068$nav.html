@@ -1,0 +1,31 @@
+﻿<nav id="menu">
+	<ul>
+		<li>
+            <a id="open-icon" href="#">
+				<i class="icon icon-white icon-list"></i>
+            </a>
+		</li>
+            <li>
+            <a href="#home">
+				<i class="icon icon-white icon-home"></i>
+				Home
+            </a>
+		</li>
+		<li>
+            <a href="#details">
+				<i class="icon icon-white icon-arrow-right"></i>
+				Details
+            </a>
+		</li>
+
+        <!-- ko foreach: router.routes -->
+            <li>
+                <a href="#details">
+					<i class="icon icon-white icon-arrow-right"></i>
+					<span data-bind="text: caption()"></span>
+                </a>
+			</li>
+        <!-- /ko -->
+
+	</ul>
+</nav>

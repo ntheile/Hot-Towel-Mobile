@@ -1,0 +1,1 @@
+define(["services/logger"],function(e){function t(){return e.log(title+" View Activated",null,title,!0),!0}var n={activate:t};return n});
