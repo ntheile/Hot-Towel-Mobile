@@ -34,10 +34,11 @@ you can use native features such as the Camera and deploy your application to th
 
 To Create a PhoneGap Build App
 --------------------------------
-* Review the docs here, https://build.phonegap.com/docs 
-* To get up and running quickly...simply build the app in release mode then
- run the `PhoneGapBuild.ps1` and it will output a folder on the desktop.
-* Zip the folder up and upload it to https://build.phonegap.com . 
+1. Review the docs here, https://build.phonegap.com/docs 
+2. To get up and running quickly...simply build the app in `test` mode so weyland will build and minify the js together
+3. Then reference `main-built.js` in your index.html. 
+4. Next run the `PhoneGapBuild.ps1` and it will output a folder on the desktop.
+5. Zip the folder up and upload it to https://build.phonegap.com . 
 An app will be built and available for download from the site.
 
 To Create App Icons
