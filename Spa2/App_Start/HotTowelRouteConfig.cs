@@ -19,13 +19,13 @@ namespace HotTowelMobile.App_Start {
       // Preempt standard default MVC page routing to go to HotTowel Sample
       System.Web.Routing.RouteTable.Routes.MapRoute(
           name: "HotTowelMvc",
-          url: "{controller}/{action}/{id}",
-          defaults: new
-          {
-              controller = "HotTowel",
-              action = "Index",
-              id = UrlParameter.Optional
-          }
+          url: "{controller}/{action}/{id}"//,
+          //defaults: new
+          //{
+          //    controller = "HotTowel",
+          //    action = "Index",
+          //    id = UrlParameter.Optional
+          //}
       );
     }
   }
