@@ -1,9 +1,7 @@
 ﻿Hot Towel Mobile
 =================
 
-
 Demo: http://hottowelmobile.azurewebsites.net/
-
 
 Hot Towel Mobile is a Single Page Application (SPA) framework built off of Hot Towel using the following frameworks:
 
@@ -28,7 +26,7 @@ Hot Towel Mobile is a Single Page Application (SPA) framework built off of Hot T
 
 
 
-![Screenshot](Spa2/Content/images/readme.png)
+![Screenshot](HotTowelMobile/Content/images/readme.png)
 
 
 Features
