@@ -1,7 +1,32 @@
 ﻿Hot Towel Mobile
 =================
 
+
 Demo: http://hottowelmobile.azurewebsites.net/
+
+
+Hot Towel Mobile is a Single Page Application (SPA) framework built off of Hot Towel using the following frameworks:
+
+**Frontend**
+
+* Breeze.js – rich data management
+* Durandal.js – navigation, app life cycle and View composition
+* Knockout.js – data bindings
+* Require.js – Modularity with AMD and optimization
+* Toastr.js – pop-up messages
+* Twitter Bootstrap – robust CSS styling
+* Phonegap - Interacting with native mobile/tablet API's in javascript
+* jQuery - DOM
+* jQuery.mmenu - responsive side menu
+
+**Optional Backend** 
+
+* ASP.NET MVC
+* ASP.NET Web API
+* ASP.NET Web Optimization – bundling and minification
+* Node.js and Express
+
+
 
 ![Screenshot](Spa2/Content/images/readme.png)
 
