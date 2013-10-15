@@ -3,7 +3,9 @@
 
 Demo: http://hottowelmobile.azurewebsites.net/
 
-Hot Towel Mobile is a Single Page Application (SPA) framework built off of Hot Towel using the following frameworks:
+Hot Towel Mobile is a Single Page Application (SPA) boilerplate framework built off Hot Towel that allows you to maintain one 
+codebase for native deployments to Android / iPhone / Blackberry / Windows Phone / Browsers / Windows 8 / etc...
+It uses the following frameworks:
 
 **Frontend**
 
@@ -22,6 +24,7 @@ Hot Towel Mobile is a Single Page Application (SPA) framework built off of Hot T
 * ASP.NET MVC
 * ASP.NET Web API
 * ASP.NET Web Optimization – bundling and minification
+* ASP.NET with breeze controllers (OData, paging, filtering, yumm )
 * Node.js and Express
 
 
