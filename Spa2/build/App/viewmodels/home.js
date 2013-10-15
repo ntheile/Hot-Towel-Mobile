@@ -1,1 +1,0 @@
-define(["services/logger","durandal/app"],function(e,t){function n(){return e.log(r+" View Activated",null,r,!0),!0}function i(){t.lastPage=r,toastr.info("lastPage:"+t.lastPage)}var r="Home",o={activate:n,deactivate:i,title:r};return o});

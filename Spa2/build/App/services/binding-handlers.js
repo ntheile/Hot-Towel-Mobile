@@ -1,1 +1,0 @@
-define(["durandal/system","durandal/composition"],function(e,t){t.addBindingHandler("mmenu",{init:function(e){$("a#open-icon-menu").click(function(t){t.stopImmediatePropagation(),t.preventDefault(),$(e).trigger("toggle.mm")}),$(e).mmenu()}})});
